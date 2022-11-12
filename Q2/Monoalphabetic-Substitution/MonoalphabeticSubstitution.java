@@ -39,7 +39,7 @@ public class MonoalphabeticSubstitution extends JFrame {
     int x = (d.width - getSize().width) / 2;
     int y = (d.height - getSize().height) / 2;
     setLocation(x, y);
-    setTitle("MonoalphabeticSubstitution");
+    setTitle("MonoalphabeticSubstitution | tnckdev");
     setResizable(false);
     Container cp = getContentPane();
     cp.setLayout(null);
@@ -105,7 +105,7 @@ public class MonoalphabeticSubstitution extends JFrame {
   private String encodeString(String input){
     String s = "";
     for (char c: input.toCharArray()) {
-      s += encodingAlphabet.getOrDefault(c, ' ');
+      s += encodingAlphabet.getOrDefault(c, c);
     } // end of for
     return s;
   }
@@ -113,7 +113,7 @@ public class MonoalphabeticSubstitution extends JFrame {
   private String decodeString(String input){
     String s = "";
     for (char c: input.toCharArray()) {
-      s += decodingAlphabet.getOrDefault(c, ' ');
+      s += decodingAlphabet.getOrDefault(c, c);
     } // end of for
     return s;
   }
